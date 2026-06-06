@@ -5,9 +5,12 @@ char canvas[ROWS][COLS];
 void clearcanvas()
 {
   int i,j;
-  for(int i=0;i<n;i++)
+  for(i=0;i<ROWS;i++)
     {
+      for(j=0;j<COLS;j++)
+      {
       canvas[i][j]='_';
+      }
     }
 }
 void putPixel(int x,int y,char ch)
@@ -17,10 +20,10 @@ void putPixel(int x,int y,char ch)
   canvas[y][x]=ch;
   }
 }  
-void display()
+void displayCanvas()
 {
   int i,j;
-  for(i=o;i<ROWS;i++)
+  for(i=0;i<ROWS;i++)
     {
       for(j=0;j<COLS;j++)
         {
